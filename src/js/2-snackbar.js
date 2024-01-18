@@ -10,7 +10,7 @@ snackbar.addEventListener("submit", function (event) {
     event.preventDefault();
 
     const delay = parseInt(this.elements.delay.value);
-    const state = this.elements.state.value;
+    const state = document.querySelector('[name="state"]:checked').value
 
     const snackbarPromise = new Promise((resolve, reject) => {
     setTimeout(() => {

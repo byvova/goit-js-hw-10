@@ -3,6 +3,11 @@ import flatpickr from "flatpickr";
 // Додатковий імпорт стилів
 import "flatpickr/dist/flatpickr.min.css";
 
+// Описаний у документації
+import iziToast from "izitoast";
+// Додатковий імпорт стилів
+import "izitoast/dist/css/iziToast.min.css";
+
 let userSelectedDate;
 
 document.addEventListener("DOMContentLoaded", function () {
@@ -20,6 +25,7 @@ document.addEventListener("DOMContentLoaded", function () {
                     title: "Error",
                     message: "Please choose a date in the future"
                 });
+                
                 document.querySelector("button[data-start]").disabled = true;
             } else {
                 document.querySelector("button[data-start]").disabled = false;
